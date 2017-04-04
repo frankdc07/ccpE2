@@ -9,7 +9,7 @@ import './main.html';
 Template.body.helpers({
   rutas(){
 
-      console.log(Rutas.find());
+      console.log("entro"+Rutas.find());
     return Rutas.find({});
   },
 });
