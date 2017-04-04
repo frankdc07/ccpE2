@@ -1,20 +1,23 @@
 <head>
-  <title>ccp2</title>
+  <title>ccp</title>
 </head>
 
 <body>
   <h1>Welcome to Meteor!</h1>
 
-  {{> hello}}
-  {{> info}}
+  <ul>
+      {{#each rutas}}
+        {{> ruta}}
+      {{/each}}
+  </ul>
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="ruta">
+
+  <span class="text"><strong>{{COORDENADA}}</strong> - {{IDGUIA}}</span>
 </template>
 
-<template name="info">
+<!-- <template name="info">
   <h2>Learn Meteor!</h2>
   <ul>
     <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
@@ -22,4 +25,4 @@
     <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
     <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
   </ul>
-</template>
+</template> -->
