@@ -7,8 +7,9 @@ export const Rutas = new Mongo.Collection('rutas');
 import './main.html';
 
 Template.body.helpers({
-  console.log(entro);
   rutas(){
+
+      console.log(Rutas.find());
     return Rutas.find({});
   },
 });
