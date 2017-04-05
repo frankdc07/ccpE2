@@ -1,5 +1,5 @@
 import { Template } from 'meteor/templating';
-//import { ReactiveVar } from 'meteor/reactive-var';
+import { ReactiveVar } from 'meteor/reactive-var';
 import { Rutas } from '../imports/api/tasks.js'
 
 
@@ -7,6 +7,7 @@ import './main.html';
 
 Template.body.helpers({
   rutas(){
+    console.log("in");
     return Rutas.find({});
   },
 });
