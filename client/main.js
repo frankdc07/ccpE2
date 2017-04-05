@@ -8,8 +8,7 @@ import './main.html';
 
 Template.body.helpers({
   rutas(){
-
-      console.log("entro");
+    console.log(Rutas.find());
     return Rutas.find({});
   },
 });
