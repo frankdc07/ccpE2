@@ -6,8 +6,6 @@ import { Rutas } from '../imports/api/rutas.js'
 import './main.html';
 
 Template.body.helpers({
-
-    console.log("in");
   rutas(){
     return Rutas.find({});
   },
