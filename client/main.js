@@ -1,13 +1,14 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
-import { Rutas } from '../imports/api/ruta.js'
+import { Rutas } from '../imports/api/rutas.js'
 
 
 import './main.html';
 
 Template.body.helpers({
-  rutas(){
+
     console.log("in");
+  rutas(){
     return Rutas.find({});
   },
 });
