@@ -1,14 +1,12 @@
 import { Template } from 'meteor/templating';
 //import { ReactiveVar } from 'meteor/reactive-var';
-import { Mongo } from 'meteor/mongo';
+import { Rutas } from '../imports/api/tasks.js'
 
-Rutas = new Mongo.Collection('rutas');
 
 import './main.html';
 
 Template.body.helpers({
   rutas(){
-    console.log(Rutas.find());
     return Rutas.find({});
   },
 });
