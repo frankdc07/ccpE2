@@ -1,6 +1,6 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
-import { Rutas } from '../imports/api/tasks.js'
+import { Rutas } from '../imports/api/rutas.js'
 
 
 import './main.html';
