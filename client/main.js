@@ -31,7 +31,8 @@ Template.map.onCreated(function() {
       Rutas.find().forEach( function(ruta) {
         marker = new google.maps.Marker({
           position: new google.maps.LatLng(ruta.LATITUD, ruta.LONGITUD),
-          map: map.instance
+          map: map.instance,
+          title: 'Guia: ' + ruta.IDGUIA
         });
       });
     });
