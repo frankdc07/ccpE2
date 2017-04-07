@@ -9,20 +9,31 @@
 
   <h1>Notificacion rutas</h1>
 
-  <ul>
+  <div style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th>Coordenada</th>
+      <th>Latitud</th>
+      <th>Longitud</th>
+      <th>Id Guia</th>
+      <th>Id Ruta</th>
+    </tr>
       {{#each rutas}}
         {{> ruta}}
       {{/each}}
-  </ul>
-
+  </table>
 
 
 </body>
 
 <template name="ruta">
-  <li>
-    <span class="text"><strong>{{COORDENADA}}</strong> - {{IDGUIA}}</span>
-  </li>
+  <tr>
+    <td>{{COORDENADA}}</td>
+    <td>{{LATITUD}}</td>
+    <td>{{LONGITUD}}</td>
+    <td>{{IDGUIA}}</td>
+    <td>{{IDRUTA}}</td>
+  </tr>
 </template>
 
 <template name="map">
