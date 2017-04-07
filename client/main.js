@@ -78,7 +78,8 @@ Template.map.helpers({
       // if (GoogleMaps.loaded() && latLng) {
       if (GoogleMaps.loaded()){
         return {
-          center: new google.maps.LatLng(latLng.lat, latLng.lng),
+          //center: new google.maps.LatLng(latLng.lat, latLng.lng),
+          center: {lat: -33, lng: 151},
           zoom: MAP_ZOOM
         };
       }
