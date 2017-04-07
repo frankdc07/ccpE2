@@ -10,12 +10,26 @@
         {{> ruta}}
       {{/each}}
   </ul>
+
+  <h1>Geolocation example</h1>
+  {{> map}}
+
 </body>
 
 <template name="ruta">
   <li>
     <span class="text"><strong>{{COORDENADA}}</strong> - {{IDGUIA}}</span>
   </li>
+</template>
+
+<template name="map">
+  <div class="map-container">
+    {{#unless geolocationError}}
+      {{> googleMap name="map" options=mapOptions}}
+    {{else}}
+      Geolocation failed: {{geolocationError}}
+    {{/unless}}
+  </div>
 </template>
 
 <!-- <template name="info">
