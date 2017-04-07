@@ -9,9 +9,9 @@ import './main.html';
 
 
 
-Meteor.startup(function() {
-  GoogleMaps.load({key:'AIzaSyCaJEtneA1POPaPJ7j072LgyKfBT6vuRvI'});
-});
+// Meteor.startup(function() {
+//   GoogleMaps.load({key:'AIzaSyCaJEtneA1POPaPJ7j072LgyKfBT6vuRvI'});
+// });
 
 Template.body.helpers({
   rutas(){
