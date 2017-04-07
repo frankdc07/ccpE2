@@ -25,11 +25,13 @@ Template.map.onCreated(function() {
   var self = this;
 
   GoogleMaps.ready('map', function(map) {
-    self.autorun(function(){
+    //self.autorun(function(){
       var marker;
       var flightPlanCoordinates = [
             {lat: 37.772, lng: -122.214},
-            {lat: 21.291, lng: -157.821}
+            {lat: 21.291, lng: -157.821},
+            {lat: -18.142, lng: 178.431},
+            {lat: -27.467, lng: 153.027}
           ];
       var flightPath = new google.maps.Polyline({
             path: flightPlanCoordinates,
@@ -39,7 +41,7 @@ Template.map.onCreated(function() {
             strokeWeight: 2
           });
       flightPath.setMap(map);
-    });
+    //});
 
 
       // Create and move the marker when latLng changes.
@@ -79,7 +81,7 @@ Template.map.helpers({
       if (GoogleMaps.loaded()){
         return {
           //center: new google.maps.LatLng(latLng.lat, latLng.lng),
-          center: {lat: 37.772, lng: -122.214},
+          center: {lat: -27.467, lng: 153.027},
           zoom: MAP_ZOOM
         };
       }
