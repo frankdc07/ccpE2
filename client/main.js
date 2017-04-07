@@ -43,7 +43,7 @@ Template.map.onCreated(function() {
     //     flightPath.setMap(map);
 
 
-      Create and move the marker when latLng changes.
+      // Create and move the marker when latLng changes.
       self.autorun(function() {
         var latLng = Geolocation.latLng();
         if (! latLng)
