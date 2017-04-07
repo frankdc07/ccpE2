@@ -9,7 +9,7 @@ import './main.html';
 
 Meteor.startup(function() {
   console.log('0maldita sea');
-  GoogleMaps.load();
+  //GoogleMaps.load();
 });
 
 Template.body.helpers({
@@ -34,7 +34,7 @@ Template.body.helpers({
 });
 
 
-Template.map.onCreated(function() {
+Template.body.onCreated(function() {
   var self = this;
 
   GoogleMaps.ready('map', function(map) {
