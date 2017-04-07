@@ -8,6 +8,7 @@ import './main.html';
 
 
 Meteor.startup(function() {
+  console.log('0maldita sea');
   GoogleMaps.load();
 });
 
