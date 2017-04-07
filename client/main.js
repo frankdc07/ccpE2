@@ -25,7 +25,7 @@ Template.map.onCreated(function() {
   var self = this;
 
   GoogleMaps.ready('map', function(map) {
-    //self.autorun(function(){
+    self.autorun(function(){
       var marker;
       var flightPlanCoordinates = [
             {lat: 37.772, lng: -122.214},
@@ -41,7 +41,7 @@ Template.map.onCreated(function() {
             strokeWeight: 2
           });
       flightPath.setMap(map);
-    //});
+    });
 
 
       // Create and move the marker when latLng changes.
