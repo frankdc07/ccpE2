@@ -30,9 +30,12 @@ Template.map.onCreated(function() {
       //var rutas = Rutas.find({});
       Rutas.find().forEach( function(ruta) {
         marker = new google.maps.Marker({
-        position: new google.maps.LatLng(ruta.LATITUD, ruta.LONGITUD),
-        map: map.instance
+          position: new google.maps.LatLng(ruta.LATITUD, ruta.LONGITUD),
+          map: map.instance
+        });
       });
+    });
+
 
 
       // Create and move the marker when latLng changes.
