@@ -7,37 +7,22 @@ var MAP_ZOOM = 15;
 import './main.html';
 
 
-// Meteor.startup(function() {
-//   //console.log('0maldita sea');
-//   //GoogleMaps.load();
-// });
+
+
+Meteor.startup(function() {
+  GoogleMaps.load({key:'AIzaSyCaJEtneA1POPaPJ7j072LgyKfBT6vuRvI'});
+});
 
 Template.body.helpers({
   rutas(){
     return Rutas.find({});
   },
-  geolocationError: function() {
-    var error = Geolocation.error();
-    return error && error.message;
-  },
-  mapOptions: function() {
-    var latLng = Geolocation.latLng();
-      // Initialize the map once we have the latLng.
-      if (GoogleMaps.loaded() && latLng) {
-        console.log('hola');
-        return {
-          center: new google.maps.LatLng(latLng.lat, latLng.lng),
-          zoom: MAP_ZOOM
-        };
-      }
-    }
 });
 
 
-Template.body.onCreated(function() {
-  var self = this;
 
-  GoogleMaps.load();
+Template.map.onCreated(function() {
+  var self = this;
 
   GoogleMaps.ready('map', function(map) {
     var marker;
@@ -67,7 +52,22 @@ Template.body.onCreated(function() {
     });
 });
 
-
+Template.map.helpers({
+  geolocationError: function() {
+    var error = Geolocation.error();
+    return error && error.message;
+  },
+  mapOptions: function() {
+    var latLng = Geolocation.latLng();
+      // Initialize the map once we have the latLng.
+      if (GoogleMaps.loaded() && latLng) {
+        return {
+          center: new google.maps.LatLng(latLng.lat, latLng.lng),
+          zoom: MAP_ZOOM
+        };
+      }
+    }
+  });
 //
 // Template.ruta.onCreated(function helloOnCreated() {
 //   // counter starts at 0
