@@ -7,10 +7,10 @@ var MAP_ZOOM = 15;
 import './main.html';
 
 
-Meteor.startup(function() {
-  console.log('0maldita sea');
-  //GoogleMaps.load();
-});
+// Meteor.startup(function() {
+//   //console.log('0maldita sea');
+//   //GoogleMaps.load();
+// });
 
 Template.body.helpers({
   rutas(){
@@ -36,6 +36,8 @@ Template.body.helpers({
 
 Template.body.onCreated(function() {
   var self = this;
+
+  GoogleMaps.load();
 
   GoogleMaps.ready('map', function(map) {
     var marker;
@@ -65,8 +67,7 @@ Template.body.onCreated(function() {
     });
 });
 
-Template.map.helpers({
-  });
+
 //
 // Template.ruta.onCreated(function helloOnCreated() {
 //   // counter starts at 0
