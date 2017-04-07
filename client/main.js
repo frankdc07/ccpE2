@@ -79,7 +79,7 @@ Template.map.helpers({
       if (GoogleMaps.loaded()){
         return {
           //center: new google.maps.LatLng(latLng.lat, latLng.lng),
-          center: {lat: -33, lng: 151},
+          {lat: 37.772, lng: -122.214},
           zoom: MAP_ZOOM
         };
       }
