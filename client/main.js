@@ -69,13 +69,13 @@ Template.map.helpers({
     return error && error.message;
   },
   mapOptions: function() {
-    //var latLng = Geolocation.latLng();
+    var latLng = Geolocation.latLng();
       // Initialize the map once we have the latLng.
-      // if (GoogleMaps.loaded() && latLng) {
-      if (GoogleMaps.loaded()){
+       if (GoogleMaps.loaded() && latLng) {
+      //if (GoogleMaps.loaded()){
         return {
-          //center: new google.maps.LatLng(latLng.lat, latLng.lng),
-          center: {lat: -27.467, lng: 153.027},
+          center: new google.maps.LatLng(latLng.lat, latLng.lng),
+          //center: {lat: -27.467, lng: 153.027},
           zoom: MAP_ZOOM
         };
       }
