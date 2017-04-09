@@ -10,7 +10,7 @@ import './main.html';
 
 
 Meteor.startup(function() {
-  GoogleMaps.load({key:'AIzaSyCaJEtneA1POPaPJ7j072LgyKfBT6vuRvI'});
+  GoogleMaps.load({key:'AIzaSyC##################fBT6vuRvI'});
 });
 
 Template.body.helpers({
