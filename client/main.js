@@ -21,7 +21,7 @@ Template.body.helpers({
 
 Template.ruta.helpers({
   fecha(){
-    return Date(now());
+    return Date().getTime();
   },
 });
 
