@@ -19,7 +19,11 @@ Template.body.helpers({
   },
 });
 
-
+Template.ruta.helpers({
+  fecha(){
+    return new Date();
+  },
+});
 
 Template.map.onCreated(function() {
   var self = this;
